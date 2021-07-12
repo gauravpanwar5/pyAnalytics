@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jul  8 13:31:17 2021
+
+@author: Gaurav
+"""
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from pydataset import data
+mtcars = data('mtcars')
+df=mtcars
+df
+df.mpg.sort_values()
+df.mpg.plot(kind=box)

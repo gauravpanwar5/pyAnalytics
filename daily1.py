@@ -232,9 +232,9 @@ sns.pairplot(iris)  #relationship diagrams
 
 #%% #Load Inbuilt Datasets
 
-#pip install pydataset
+pip install pydataset
 from pydataset import data
-data('iris')
+ data('iris')
 data('mtcars')
 
 #https://vincentarelbundock.github.io/Rdatasets/datasets.html
@@ -275,8 +275,11 @@ data2a.head()
 data2c = pd.read_excel('mtcarsExcel.xlsx',header=0)
 #header=None
 data2c.head()
-
-
-
+data2c.describe()
+data2b.columns
+data2b.groupby(['gear','cyl','wt']).aggregate({'mpg': [np.mean, 'max','min','count']})
+data2b.groupby(['gear']).size().plot(kind='bar')
+ 
+data2b.
 #end here....
 #now practise numpy and pandas....
